@@ -22,7 +22,7 @@ fs.readdir('./img', (err, files) => {
     <div>JXL</div>
     <div>JPEG</div>
     <img style="max-width: 100%;" src="/jxldemo/img/${fn}.jxl" alt="Here is the image">
-    <img style="max-width: 100%;" src="/jxldemo/img/${fn}.jpeg" alt="Here is the image">
+    <img style="max-width: 100%;" src="/jxldemo/img/${fn}.jpg" alt="Here is the image">
     </div>
 </body>
 </html>`
