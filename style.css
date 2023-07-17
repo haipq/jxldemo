@@ -1,0 +1,21 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+}
+img {
+    width: 100%;
+}
+.log {
+    background-color: rgba(255,255,0,0.7);
+    color: blue;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    word-wrap: break-word;
+}
+
+.img-wrapper {
+    position: relative;
+}

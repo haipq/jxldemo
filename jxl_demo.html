@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="style.css">
+  <script src="service_worker.js">
+/*
+ * Just load this script, et voila! It will install ServiceWorker to
+ * advertise image/jxl media type and decode responses.
+ * NB: if "addMessage" function is defined it will be used to report
+ * decoding times / problems.
+ */
+  </script>
+</head>
+
+<body>
+  <script>
+    let addMessage = (message) => {
+      const alltag = document.getElementsByTagName("img");
+      for (let i = 0; i < alltag.length; i++) {
+        const tag = alltag[i];
+        if (message.includes(tag.src)) {
+          tag.nextSibling.innerHTML = message;
+        }
+      }
+    }
+  </script>
+  <div class="img-wrapper"><img src="img/image00.jxl" /><div class="log"></div></div>
+  <div class="img-wrapper"><img src="img/image01.jxl" /><div class="log"></div></div>
+  <div class="img-wrapper"><img src="img/image02.jxl" /><div class="log"></div></div>
+  <div class="img-wrapper"><img src="img/image03.jxl" /><div class="log"></div></div>
+  <div class="img-wrapper"><img src="img/image04.jxl" /><div class="log"></div></div>
+  <div class="img-wrapper"><img src="img/image05.jxl" /><div class="log"></div></div>
+  <div class="img-wrapper"><img src="img/image06.jxl" /><div class="log"></div></div>
+  <div class="img-wrapper"><img src="img/image07.jxl" /><div class="log"></div></div>
+  <div class="img-wrapper"><img src="img/image08.jxl" /><div class="log"></div></div>
+  <div class="img-wrapper"><img src="img/image09.jxl" /><div class="log"></div></div>
+  <div class="img-wrapper"><img src="img/image10.jxl" /><div class="log"></div></div>
+  <div class="img-wrapper"><img src="img/image11.jxl" /><div class="log"></div></div>
+  <div class="img-wrapper"><img src="img/3200x1800.jxl" /><div class="log"></div></div>
+  <div class="img-wrapper"><img src="img/4096x4096.jxl" /><div class="log"></div></div>
+  <div class="img-wrapper"><img src="img/7680x4320.jxl" /><div class="log"></div></div>
+</body>
+
+</html>
